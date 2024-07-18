@@ -30,7 +30,7 @@ const TherapyServices = () => {
             layout="responsive"
              width={600}
             height={400}
-            className="rounded-lg"
+            className="rounded-lg z-0"
           />
         </div>
 
@@ -41,7 +41,7 @@ const TherapyServices = () => {
             layout="responsive"
              width={600}
             height={400}
-            className="rounded-lg"
+            className="rounded-lg z-0"
           />
         </div>
 
@@ -61,7 +61,7 @@ const TherapyServices = () => {
             layout="responsive"
              width={600}
             height={400}
-            className="rounded-lg"
+            className="rounded-lg z-0"
           />
           <div className="absolute bottom-4 right-4">
             <a href="#" className="text-blue-600 font-semibold flex items-center">

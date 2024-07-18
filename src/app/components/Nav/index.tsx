@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-sky-100  border-teal-950">
+    <nav className="bg-sky-100  border-teal-950 fixed top-0 left-0 right-0 z-50">
       <div className="mx-auto flex justify-between">
         <div className="flex items-center">
           <a href="/" className="text-sky-950 text-3xl p-6 font-bold">MindCare</a>
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
           <CustomLink href="/">Home</CustomLink>
           <CustomLink href="/resources">Resources</CustomLink>
           <CustomLink href="/blog">Blog</CustomLink>
-          <CustomLink href="/comm">Community</CustomLink>
+          <CustomLink href="/community">Community</CustomLink>
           <CustomLink href="/support">Support Group</CustomLink>
           <CustomLink href="/login">Join</CustomLink>
         </div>

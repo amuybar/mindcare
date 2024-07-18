@@ -24,7 +24,7 @@ const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
         leaveTo="opacity-0"
       >
 
-        <div className="flex flex-col absolute z-40 bg-sky-500 border-b-2 min-h-screen w-full p-0 m-0">
+        <div className="flex flex-col absolute z-40 bg-white border-b-2 min-h-screen w-full p-0 m-0">
           <CustomLink href="/">Home</CustomLink>
           <CustomLink href="/resources">Resources</CustomLink>
           <CustomLink href="/blog">Blog</CustomLink>

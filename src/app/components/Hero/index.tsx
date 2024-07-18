@@ -2,8 +2,20 @@ import Image from 'next/image'
 
 const HeroSection = () => {
   return (
-    <div className="container mx-auto px-4 py-24">
-      <div className="flex flex-col lg:flex-row items-center">
+    <div className="relative container mx-auto px-4 py-24">
+      {/* Blurred background image for small screens */}
+      <div className="absolute inset-0 lg:hidden">
+        <Image
+          src="/images/Default_A_contemplative_black_teenager_sitting_in_a_dimly_lit_3.jpg"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          className="blur-sm"
+        />
+        <div className="absolute inset-0 bg-white/70"></div>
+      </div>
+
+      <div className="relative flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 lg:pr-12">
           <h1 className="text-4xl md:text-5xl text-sky-900 font-bold mb-4">
             Elevate Your Happiness With Expert Therapist Guidance.
@@ -26,7 +38,7 @@ const HeroSection = () => {
           </div>
           <div className="flex justify-between text-center">
             <div>
-              <p className="text-3xl font-bold text-orange-400 border-b-2 border-b-gray-800  inline-block">1+</p>
+              <p className="text-3xl font-bold text-orange-400 border-b-2 border-b-gray-800 inline-block">1+</p>
               <p className="text-sm text-sky-800">Years of experience</p>
             </div>
             <div>
@@ -34,12 +46,12 @@ const HeroSection = () => {
               <p className="text-sm text-sky-800">Patients received assistance this year</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-orange-400 border-b-2  border-b-gray-800 inline-block">97%</p>
+              <p className="text-3xl font-bold text-orange-400 border-b-2 border-b-gray-800 inline-block">97%</p>
               <p className="text-sm text-sky-800">Client improve condition</p>
             </div>
           </div>
         </div>
-        <div className="lg:w-1/2 mt-8 lg:mt-0">
+        <div className="lg:w-1/2 mt-8 lg:mt-0 hidden lg:block">
           <div className="relative w-full aspect-[4/3] max-w-2xl">
             <div className="absolute top-0 left-0 w-[95%] h-[95%] bg-slate-800 rounded-lg"></div>
             <div className="absolute bottom-0 right-0 w-[95%] h-[95%] bg-neutral-900 rounded-lg"></div>
@@ -55,8 +67,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
-    </div >
+    </div>
   )
 }
 
