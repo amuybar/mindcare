@@ -1,1 +1,18 @@
-node_modules
+# Ignore Next.js build output
+.next/
+out/
+
+# Ignore Node.js build artifacts
+node_modules/
+
+# Ignore environment variables file
+.env
+
+# Ignore macOS directory metadata
+.DS_Store
+
+# Ignore npm debug log
+npm-debug.log*
+
+# Ignore yarn lock file
+yarn.lock
