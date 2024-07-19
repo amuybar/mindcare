@@ -26,7 +26,7 @@ const HeroSection = () => {
             At Mindcare, we are dedicated to supporting your mental health journey with personalized care and compassionate professionals. Whether youre seeking relief from stress or looking for guidance through lifes challenges, our experts are here to help.
           </p>
           <div className="flex mb-8">
-            <Link href='/book-appointment' className="bg-blue-600 text-white px-6 py-2 rounded-md mr-4">
+            <Link href='/apointment' className="bg-blue-600 text-white px-6 py-2 rounded-md mr-4">
               Book an Appointment
             </Link>
             <button className="flex items-center text-orange-400 hover:text-orange-500 transition-colors">
