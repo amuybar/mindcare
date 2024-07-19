@@ -1,11 +1,15 @@
 'use client';
 
 import React, { useState } from 'react';
-import CustomLink from '@/custom/CustomLink'; 
+import CustomLink from '@/custom/CustomLink';
 import MobileMenu from '@/custom/MobileMenu';
+import { useAuth, UserButton } from '@clerk/nextjs';
+import { FiLogOut } from 'react-icons/fi';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { isLoaded, userId, sessionId, getToken } = useAuth();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -66,11 +70,41 @@ const Navbar: React.FC = () => {
           <CustomLink href="/blog">Blog</CustomLink>
           <CustomLink href="/community">Community</CustomLink>
           <CustomLink href="/support">Support Group</CustomLink>
-          <CustomLink href="/login">Join</CustomLink>
+          {isLoaded && userId ? (
+            <>
+               <UserButton 
+            afterSignOutUrl="/"
+            appearance={{
+              elements: {
+                avatarBox: "w-10 h-10"  // Adjust size as needed
+              }
+            }}
+          />
+              <button
+                className="text-sky-950 hover:text-sky-700 focus:outline-none transition-colors duration-200 flex items-center space-x-2"
+                onClick={() => {
+                  localStorage.removeItem('clerk-session-id');
+                  window.location.reload();
+                }}
+              >
+                <FiLogOut className="text-xl" />
+                <span>Logout</span>
+              </button>
+            </>
+          ) : (
+            <>
+              <Link href="/sign-in" className="text-sky-950 hover:text-sky-700 focus:outline-none transition-colors duration-200">
+                Sign In
+              </Link>
+              <Link href="/sign-up" className="bg-sky-600 text-white px-4 py-2 rounded-md hover:bg-sky-700 focus:outline-none transition-colors duration-200">
+                Sign Up
+              </Link>
+            </>
+          )}
         </div>
       </div>
-      {isOpen &&( <MobileMenu isOpen={isOpen} />)}
-     
+      {isOpen && (<MobileMenu isOpen={isOpen} />)}
+
 
     </nav>
   );

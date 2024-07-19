@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Barrack-Amuyunzu-s-workspace-bq01mc.us-east-1.xata.sh/db/mindcare",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

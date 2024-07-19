@@ -1,0 +1,21 @@
+{
+  "tables": [
+    {
+      "name": "userDetails",
+      "columns": [
+        {
+          "name": "userId",
+          "type": "string"
+        },
+        {
+          "name": "bio",
+          "type": "text"
+        },
+        {
+          "name": "location",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}

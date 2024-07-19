@@ -4,6 +4,7 @@ import Navbar from "./components/Nav";
 import SampleResourceList from "./components/Resource";
 import TherapyServices from "./components/Services";
 import Footer from "./components/Footer";
+import FAQSection from "./components/faq";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection/>
       <SampleResourceList/>
       <TherapyServices/>
+      <FAQSection/>
       <ContactComponent/>
       <Footer/>
     </main>
